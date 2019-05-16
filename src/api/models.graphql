@@ -1,0 +1,28 @@
+type User {
+  id: ID!
+  user_name: String!
+  userid: String!
+  password: String!
+  re_passwored: String!
+  nickname: String! 
+  birthday: String!
+  gender: String!
+  email: String! 
+  find_email: String
+  mailing: String
+  phone: Int!
+  cellPhone: Int!
+  zipCode: Int!
+  address: String!
+}
+
+type Item {
+  id: ID! 
+  item: String!
+  quantity: Int!
+  price: Int!
+  discountedPrice: Int!
+  finalPrice: Int!
+  shippingFee: Int!
+}
+
