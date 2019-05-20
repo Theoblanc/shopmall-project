@@ -1,7 +1,7 @@
 type User {
     id: ID! @id
     user_name: String!
-    userid: String!
+    userid: String! @unique
     password: String!
     re_passwored: String!
     nickname: String! @unique
@@ -12,7 +12,8 @@ type User {
     mailing: String
     phone: Int!
     cellPhone: Int!
-    zipCode: Int!
+    sms: String
+    zipCode: String!
     address: String!
 }
 

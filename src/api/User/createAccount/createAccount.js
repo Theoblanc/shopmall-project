@@ -15,6 +15,7 @@ export default {
                     mailing = "",
                     phone,
                     cellPhone,
+                    sms="",
                     zipCode,
                     address
                     } = args;
@@ -33,6 +34,7 @@ export default {
             if (exist) {
                 throw Error("This nickname / email is already taken");
             }
+            
             const user = await prisma.createUser({
                 user_name,
                 userid,
@@ -46,6 +48,7 @@ export default {
                 mailing,
                 phone,
                 cellPhone,
+                sms,
                 zipCode,
                 address
             });

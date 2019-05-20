@@ -12,7 +12,8 @@ type User {
   mailing: String
   phone: Int!
   cellPhone: Int!
-  zipCode: Int!
+  sms: String
+  zipCode: String!
   address: String!
 }
 
