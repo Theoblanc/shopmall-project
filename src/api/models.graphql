@@ -18,12 +18,20 @@ type User {
 }
 
 type Item {
-  id: ID! 
-  item: String!
-  quantity: Int!
-  price: Int!
-  discountedPrice: Int!
-  finalPrice: Int!
-  shippingFee: Int!
+    id: ID! 
+    item: String!
+    quantity: Int!
+    price: Int!
+    discountedPrice: Int!
+    finalPrice: Int!
+    shippingFee: Int!
+    files: [File!]!
+
+}
+
+type File {
+    id: ID! 
+    url: String!
+    item: [Item]!
 }
 

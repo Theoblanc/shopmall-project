@@ -1,0 +1,3 @@
+type Query {
+  seeItem(id:String!): [Item!]!
+}

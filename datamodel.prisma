@@ -25,5 +25,12 @@ type Item {
     discountedPrice: Int!
     finalPrice: Int!
     shippingFee: Int!
+    files: [File!]! @relation(name: "FilesOfItem", onDelete: CASCADE)
+
 }
 
+type File {
+    id: ID! @id
+    url: String!
+    item: Item @relation(name: "FilesOfItem")
+}
