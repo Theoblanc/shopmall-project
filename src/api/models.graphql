@@ -26,7 +26,6 @@ type Item {
     finalPrice: Int!
     shippingFee: Int!
     files: [File!]!
-
 }
 
 type File {
