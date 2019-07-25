@@ -15,17 +15,20 @@ type User {
   sms: String
   zipCode: String!
   address: String!
+  cart: [Item!]!
 }
 
 type Item {
     id: ID! 
     item: String!
+    color: String!
     quantity: Int!
     price: Int!
     discountedPrice: Int!
     finalPrice: Int!
     shippingFee: Int!
     files: [File!]!
+    user: [User!]!
 }
 
 type File {

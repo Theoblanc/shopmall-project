@@ -15,18 +15,19 @@ type User {
     sms: String
     zipCode: String!
     address: String!
+    cart: [Item!]! @relation(name: "CartOfItem", onDelete: CASCADE)
 }
 
 type Item {
     id: ID! @id
     item: String!
+    color: String!
     quantity: Int!
     price: Int!
     discountedPrice: Int!
     finalPrice: Int!
-    shippingFee: Int!
     files: [File!]! @relation(name: "FilesOfItem", onDelete: CASCADE)
-
+    user: [User!]!  @relation(name: "CartOfItem", onDelete: CASCADE)
 }
 
 type File {
@@ -34,3 +35,4 @@ type File {
     url: String!
     item: Item @relation(name: "FilesOfItem")
 }
+
